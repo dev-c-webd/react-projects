@@ -1,6 +1,16 @@
+import { useState } from "react";
 
 function TodoForm() {
     
+
+    const [todo, setTodo] = useState([]);
+
+    const add = (todo) => {
+
+        if (!todo) return;
+        
+        addTodo(todo);
+    }
 
     return (
         <form  className="flex">
